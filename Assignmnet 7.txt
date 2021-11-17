@@ -1,0 +1,22 @@
+
+
+ 
+        DECLARE s, F2, L2: String
+        DECLARE count: Integer
+
+  
+        Print: ("Enter the string: ")
+
+	 Input: s
+
+        If Len(s) <-- 2 Then
+            Print: (s)
+            Input: ()
+        End If
+
+       
+        For count = 1 To Len(s)
+            F2 = Left(s, 2)
+            L2 = Right(s, 2)
+        Next
+        Print: (F2 & L2)

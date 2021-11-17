@@ -1,0 +1,36 @@
+Module Module1
+
+    Sub Main()
+
+        DECLARE  str1: String
+        DECLARE thischar, char1: Char
+        DECLARE allalpha, count: Integer
+
+        str1 = ''
+        thischar = ''
+        allalpha = 0
+        count = 0
+        char1 = 'a-z, A-Z'
+
+        Print:("Enter string: ")
+        Input= str1
+
+        For count = 1 To Len(str1)
+            thischar = Mid(str1, count, 1)
+            If thischar = char1 Then
+                allalpha = allalpha + 1
+            End If
+
+            If str1 = InStr(str1, thischar) Then
+                Print: ("this string has both capital and small alike")
+            Else
+                Print: ("this string is invalid")
+            End If
+
+        Next
+       
+
+
+    End Sub
+
+End Module

@@ -1,0 +1,36 @@
+
+
+    Sub Main()
+     
+        DECLARE s1 As String
+        DECLARE thischar, char1 As Char
+        DECLARE charcount, count As Integer
+
+        
+        s1 = ''
+        thischar = ''
+        charcount = 0
+        count = 0
+        char1 = ''
+
+       
+        Print: ("Enter a sentence: ")
+        Input = s1
+
+        Print: ("Enter the character to counted: ")
+        Input = char1
+
+       
+        For count = 1 To Len(s1)
+            thischar = Mid(s1, count, 1)
+            If thischar = char1 Then
+                charcount = charcount + 1
+            Else
+                charcount = charcount
+            End If
+
+        Next
+       
+        Print("the character was used " & charcount & " times.")
+      
+

@@ -1,0 +1,31 @@
+
+        DECLARE str1, str2, thisstr, s2, s3: String
+        DECLARE count: Integer
+
+ 
+        str1 = ''
+        str2 = ''
+        thisstr = ''
+        s2 = 'ly'
+        s3 = 'ing'
+
+       
+        Print:("Enter the string: ")
+        Input: str1
+
+        For count = 1 To Len(str1)
+            thisstr = Right(str1, 3)
+
+          
+            If thisstr = s3 Then
+                str2 = str1 & s2
+            Else
+                str2 = str1 & s3
+            End If
+            If Len(str1) < 3 Then
+                Print:Line(str1)
+                Console.ReadLine()
+            End If
+        Next
+        Print:(str2)
+ 

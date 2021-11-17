@@ -1,0 +1,29 @@
+
+
+
+        
+        DECLARE donut, donutcount:  Integer
+
+
+
+        donut = 0
+        donutcount = 0
+
+
+        Print: ("How many Donuts are there; For Example '4: ")
+        
+        Input: donut
+
+
+        For count = 1 To donut
+            If donut > 10 Then
+                Print: ("Number of Donuts: MANY")
+                Input()
+            Else
+                If Len(donut) < 10 Then
+                    Print: ("NUMBER OF DONUTS: " & donut)
+                    Input()
+                End If
+            End If
+        Next
+       

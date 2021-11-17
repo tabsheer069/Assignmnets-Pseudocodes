@@ -1,0 +1,41 @@
+Module Module1
+
+    Sub Main()
+        DECLARE s1, s2: String
+        DECLARE thischar: Char
+        DECLARE Acount, Ecount, Icount, Ocount, Ucount, count: Integer
+
+        s1 = ""
+        s2 = ""
+        thischar = ""
+        Acount = 0
+        Ecount = 0
+        Icount = 0
+        Ocount = 0
+        Ucount = 0
+
+        Print: ("Enter the string to be processed: ")
+        Input: s1
+
+        For count = 1 To Len(s1)
+            s2 = UCase(s1)
+            thischar = Mid(s2, count, 1)
+            If thischar = "A" Then
+                Acount = Acount + 1
+            End If
+            If thischar = "E" Then
+                Ecount = Ecount + 1
+            End If
+            If thischar = "I" Then
+                Icount = Icount + 1
+            End If
+            If thischar = "O" Then
+                Ocount = Ocount + 1
+            End If
+            If thischar = "U" Then
+                Ucount = Ucount + 1
+            End If
+        Next
+        Print: ("Acount: " & Acount & ", Ecount: " & Ecount & ", Icount: " & Icount & ", Ocount: " & Ocount & ", Ucount: " & Ucount & ".")
+        
+  

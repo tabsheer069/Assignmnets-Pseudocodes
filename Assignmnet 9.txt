@@ -1,0 +1,46 @@
+
+        DECLARE str1, str2, s1, s2, slast, sfirst: String
+        DECLARE c1, c2: Char
+        DECLARE count: Integer
+
+        'Initialization
+        slast = ''
+        sfirst = ''
+        str1 = ''
+        str2 = ''
+        s1 = ''
+        s2 =''
+        c1 = ''
+        c2 = ''
+        count = 0
+
+        Print("Enter 1st string: ")
+        Input: str1
+
+
+        
+        Print("Enter second string: ")
+        Input: str2
+
+        For count = 1 To Len(str1)
+            If Len(str1) >= 3 Then
+                s1 = Left(str1, 2)
+            Else
+                Print("string 1 invalid")
+                Input()
+            End If
+        Next
+
+     
+        For count = 1 To Len(str2)
+            If Len(str2) >= 3 Then
+                s2 = Left(str2, 2)
+            Else
+                Print("string 2 invalid")
+                Input()
+            End If
+            sfirst = Replace(str1, s1, s2)
+            slast = Replace(str2, s2, s1)
+        Next
+        Print("Processed string : " & sfirst & " " & slast)
+       

@@ -1,0 +1,25 @@
+
+        DECLARE Str1: String
+        DECLARE thischar, mychar:  Char
+        DECLARE count: Integer
+
+        Str1 = ''
+        thischar = ''
+        myChar = ''
+        count = 0
+
+    
+        Print ("Enter a statement")
+	Input = Str1
+
+        thischar = Left(Str1, 1)
+        Print: (thischar)
+
+
+        For count = 1 To Len(Str1) - 1
+            myChar = Mid(Str1, (count + 1), 1)
+            If myChar = thischar Then
+                myChar = "*"
+            End If
+            Print: (myChar)
+        Next

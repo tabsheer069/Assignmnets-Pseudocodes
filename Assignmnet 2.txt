@@ -1,0 +1,43 @@
+Module Module1
+
+    Sub Main()
+
+        
+        DECLARE  str1, str2: String
+        DECLARE  thischar: Char
+        DECLARE  count: Integer
+        DECLARE  char1: Char
+        DECLARE  char2: Char
+
+        
+        str1 = ''
+        str2 = ''
+        thischar = ''
+        char1 = ''
+        char2 = ''
+        count = 0
+
+         
+        Print: ("Enter string to be processed: ")
+        Input: str1
+
+        
+        Print: ("Enter the character to replace: ")
+        Input: char1
+
+        
+        Print: ("Enter the character to replace it with: ")
+        Input: char2
+       
+        For count = 1 To Len(str1)
+            thischar = Mid(str1, count, 1)
+            If thischar = char1 Then
+                str2 = Replace(str1, char1, char2)
+            End If
+
+        Next
+        Print: (str2)
+        Console.ReadKey()
+    End Sub
+
+End Module
